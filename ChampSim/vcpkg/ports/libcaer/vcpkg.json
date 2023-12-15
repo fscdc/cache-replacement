@@ -1,0 +1,27 @@
+{
+  "name": "libcaer",
+  "version-date": "2022-07-25",
+  "port-version": 4,
+  "description": "Minimal C library to access, configure and get data from neuromorphic sensors and processors.",
+  "homepage": "https://gitlab.com/inivation/dv/libcaer",
+  "license": "BSD-2-Clause",
+  "dependencies": [
+    "libusb",
+    {
+      "name": "opencv4",
+      "default-features": false
+    },
+    {
+      "name": "pkgconf",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ]
+}

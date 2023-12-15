@@ -1,0 +1,47 @@
+{
+    "executable_name": "champsim",
+    "block_size": 64,
+    "heartbeat_frequency": 10000000,
+    "num_cores": 1,
+    "branch_predictor": "perceptron",
+    "ooo_cpu": [
+        {
+            "rob_size": 128,
+            "fetch_width": 4,
+            "decode_width": 4,
+            "dispatch_width": 4,
+            "execute_width": 4,
+            "lq_width": 2,
+            "sq_width": 2,
+            "retire_width": 5
+        }
+    ],
+    "L1I": {
+        "sets": 64,
+        "ways": 8,
+        "latency": 4,
+        "prefetcher": "next_line_instr",
+        "replacement": "lru"
+    },
+    "L1D": {
+        "sets": 64,
+        "ways": 8,
+        "latency": 4,
+        "prefetcher": "falcon",
+        "replacement": "lru"
+    },
+    "L2C": {
+        "sets": 512,
+        "ways": 8,
+        "latency": 12,
+        "prefetcher": "falcon",
+        "replacement": "lru"
+    },
+    "LLC": {
+        "sets": 2048,
+        "ways": 16,
+        "latency": 26,
+        "prefetcher": "next_line",
+        "replacement": "glider"
+    }
+}
